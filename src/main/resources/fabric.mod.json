@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "eclipse-sky-spear-optimizer",
+	"version": "${version}",
+	"name": "Eclipse Sky Spear Optimizer",
+	"description": "Swaps to a Lunge spear, attacks, and swaps back.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/eclipse-sky-spear-optimizer/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"eclipseskyspearoptimizer.EclipseSkySpearOptimizer"
+		],
+		"client": [
+			"eclipseskyspearoptimizer.client.EclipseSkySpearOptimizerClient"
+		]
+	},
+	"mixins": [
+		"eclipse-sky-spear-optimizer.mixins.json",
+		{
+			"config": "eclipse-sky-spear-optimizer.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
